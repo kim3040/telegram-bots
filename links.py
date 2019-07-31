@@ -2,7 +2,7 @@
 import amanobot
 from amanobot.loop import MessageLoop
 import time
-from amanobot.exception import TelegramError, TooManyRequestsError, NotEnoughRightsError
+from amanobot.exception import NotEnoughRightsError
 
 bot = amanobot.Bot('SEUTOKEN')
 
@@ -14,11 +14,10 @@ def handle(msg):
    try:
 #o bot tentará pegar o link do grupo
     exportar = bot.exportChatInviteLink(msg['chat']['id'])
-    bot.sendMessage(msg['chat']['id'], exportar) 
+    bot.sendMessage(msg['chat']['id'],exportar) 
    except NotEnoughRightsError:
 #se der um erro o bot enviará uma mensagem dizendo que não possui adm
-    bot.sendMessage(msg['chat']['id'], "não tenho adm para pegar o link do grupo") 
-    
+    bot.sendMessage(msg['chat']['id'],"não tenho adm para pegar o link do grupo") 
 MessageLoop(bot, handle).run_as_thread()
 while 1:
   time.sleep(10)
