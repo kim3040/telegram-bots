@@ -3,7 +3,7 @@ import amanobot
 from amanobot.loop import MessageLoop
 import time
 
-bot = amanobot.Bot('826276252:AAHVOOOLswpggSeAOPet9fIl1VQvRBQRXAI')
+bot = amanobot.Bot('TOKENAKI')
 
 def handle(msg):
  if msg['text'] == '/start':
