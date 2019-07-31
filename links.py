@@ -4,7 +4,7 @@ from amanobot.loop import MessageLoop
 import time
 from amanobot.exception import NotEnoughRightsError
 
-bot = amanobot.Bot('826276252:AAFoIsGtdXh34_U1re_AHml3jO2gJ-mEnRc')
+bot = amanobot.Bot('TOKENAKI')
 
 def handle(msg):
 # Definimos o comando /link 
